@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 // import styles from './ContactForm.module.css';
 
-export default function ContactForm() {
+export default function ContactForm({ onSubmit }) {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -19,7 +19,7 @@ export default function ContactForm() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    onsubmit({ name, number });
+    onSubmit({ name, number });
     setName('');
     setNumber('');
   }
